@@ -12,6 +12,8 @@
 #ifndef SIMPLEKNN_H_INCLUDED
 #define SIMPLEKNN_H_INCLUDED
 
+#include <cstdint>
+
 class SimpleKNN
 {
 public:
