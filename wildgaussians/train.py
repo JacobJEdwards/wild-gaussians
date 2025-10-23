@@ -214,6 +214,7 @@ _CONFIG_OVERRIDES = {
 @click.option("--dataset-type", type=click.Choice(["default", "nerfonthego", "phototourism"]), default="default")
 @click.option("--eval-few-iters", type=IndicesClickType(), default=Indices.every_iters(2_000), help="When to evaluate on few images")
 @click.option("--set", "config_overrides", help="Override a parameter in the method.", type=SetParamOptionType(), multiple=True, default=None)
+@click.option("--postfix", type=str, default=None, help="")
 def train_command(
     data,
     output,
@@ -259,7 +260,7 @@ def train_command(
         load_dataset_fn = partial(
             load_dataset, 
             load_dataset_fn=load_colmap_dataset, 
-            images_path="images",
+            images_path="images_8_variance",
             evaluation_protocol=evaluation_protocol.get_name()
         )
 
