@@ -230,7 +230,7 @@ def load_colmap_dataset(path: Union[Path, str],
             colmap_path = Path("sparse")
     colmap_path = path / colmap_path
     if images_path is None:
-        images_path = Path("images_8_variance")
+        images_path = Path("images_8_contrast")
     images_path = path / images_path
     if not colmap_path.exists():
         raise DatasetNotFoundError("Missing 'sparse/0' folder in COLMAP dataset")

@@ -33,7 +33,7 @@ def load_phototourism_dataset(path: Union[Path, str], split: str, use_nerfw_spli
 
     # Load phototourism dataset
     scene = single(res for res in _phototourism_downloads if str(res) in path.name)
-    images_path = "images_8_variance"
+    images_path = "images_8_contrast"
     split_list = None
     if use_nerfw_split:
         if (path / "nerfw_split.csv").exists():
