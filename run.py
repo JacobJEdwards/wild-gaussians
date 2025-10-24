@@ -15,7 +15,8 @@ def main() -> None:
         output_scene_dir = OUTPUT_DIR / scene_name
         output_scene_dir.mkdir(parents=True, exist_ok=True)
 
-        command = ["nerfbaselines", "train", "--method", "wild-gaussians", "--data", str(scene), "--output", str(output_scene_dir)]
+        command = ["nerfbaselines", "train", "--method", "wild-gaussians", "--data", str(scene), "--output",
+                   str(output_scene_dir), "--backend", "python"]
 
         print(f"Processing scene: {scene_name}")
 
