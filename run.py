@@ -2,7 +2,7 @@ from pathlib import Path
 import subprocess
 
 BASE_DIR = Path("/workspace/360_v2")
-OUTPUT_DIR = Path("/workspace/wild-gs/variance")
+OUTPUT_DIR = Path("/workspace/wild-gs/multiexposure")
 
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

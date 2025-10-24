@@ -260,7 +260,7 @@ def train_command(
         load_dataset_fn = partial(
             load_dataset, 
             load_dataset_fn=load_colmap_dataset, 
-            images_path="images_8_variance",
+            images_path="images_8_multiexposure",
             evaluation_protocol=evaluation_protocol.get_name()
         )
 
